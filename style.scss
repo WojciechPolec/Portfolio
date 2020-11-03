@@ -276,8 +276,7 @@ header.sticky
             max-width: 100%;
             margin-top: 40px;
             .photo,
-            .description
-            .containerbar{
+            .description{
                 max-width: 100%;
                 margin: 0 auto;
                 padding: 20px;
@@ -290,48 +289,58 @@ header.sticky
                     margin: 0 auto;
                 }
             }
-            .containerbar{
-                width: 100%;
-                margin: 0;
-                padding: 0;
-                min-width: 200px;
-                max-width: 100%;
-                position: relative;
-                left: 0;
-                float: left;
-                ul.bar{
-                    li{
-                        position: relative;
-                        list-style: none;
-                        margin: 50px 0;
-                        font-weight: 500;
-                        text-transform: uppercase;
-                    }
-                    li:before {
-                        content: "";
-                        position: absolute;
-                        top: calc(100% + 10px);
-                        left: 0;
-                        width: 100%;
-                        height: 15px;
-                        background-color: lightgray;
-                        border-radius: 1000px;
-                    }
-                    li:after {
-                        content: "";
-                        position: absolute;
-                        top: calc(100% + 10px);
-                        left: 0;
-                        width: 0;
-                        height: 15px;
-                        background-color: #6d31c9;
-                        border-radius: 1000px;
-                        animation-duration: .7s;
-                        animation-timing-function: ease;
-                        animation-fill-mode: forwards;
-                    }
-                }
-            }
+            .grid-container {
+                margin-top: 50px;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr;
+                gap: 8px 8px;
+                grid-template-areas:
+                  "html css-scss js"
+                  "react rwd php"
+                  "git git-hub-lab photoeditor"
+                  ". . .";
+                  width: 100%;
+                  padding: 0;
+                  min-width: 200px;
+                  max-width: 100%;
+                  position: relative;
+                  left: 0;
+                  float: left;
+                  div{
+                      img{
+                          max-height: 110px;
+                          max-width: 100px;
+                      }
+                  }
+                  .html{
+                    grid-area: html;
+                  }
+                  .css-scss{
+                    grid-area: css-scss;
+                  }
+                  .js{
+                    grid-area: js;
+                  }
+                  .react{
+                    grid-area: react;
+                  }
+                  .rwd{
+                    grid-area: rwd;
+                  }
+                  .php{
+                    grid-area: php;
+                  }
+                  .git{
+                    grid-area: git;
+                  }
+                  .git-hub-lab{
+                    grid-area: git-hub-lab;
+                  }
+                  .photoeditor{
+                    grid-area: photoeditor;
+                  }
+              }
         }
         .containerknowledge{
             margin-top: 90px;

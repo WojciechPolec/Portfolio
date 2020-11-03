@@ -276,3 +276,22 @@
     }
   }
 }
+@media (max-width: 450px){
+  #grid-container {
+    margin-top: 50px;
+    gap: 12px 2px;
+      width: 100%;
+      padding: 0;
+      min-width: 200px;
+      max-width: 100%;
+      position: relative;
+      left: 0;
+      float: left;
+      div{
+          img{
+              max-height: 90px;
+              max-width: 70px;
+          }
+      }
+  }
+}

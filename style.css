@@ -358,8 +358,7 @@ header.sticky ul li a {
 }
 
 .sec .content .main .photo,
-.sec .content .main .description
-.containerbar {
+.sec .content .main .description {
   max-width: 100%;
   margin: 0 auto;
   padding: 20px;
@@ -372,9 +371,17 @@ header.sticky ul li a {
   margin: 0 auto;
 }
 
-.sec .content .main .containerbar {
+.sec .content .main .grid-container {
+  margin-top: 50px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+  gap: 8px 8px;
+      grid-template-areas: "html css-scss js" "react rwd php" "git git-hub-lab photoeditor" ". . .";
   width: 100%;
-  margin: 0;
   padding: 0;
   min-width: 200px;
   max-width: 100%;
@@ -383,40 +390,63 @@ header.sticky ul li a {
   float: left;
 }
 
-.sec .content .main .containerbar ul.bar li {
-  position: relative;
-  list-style: none;
-  margin: 50px 0;
-  font-weight: 500;
-  text-transform: uppercase;
+.sec .content .main .grid-container div img {
+  max-height: 110px;
+  max-width: 100px;
 }
 
-.sec .content .main .containerbar ul.bar li:before {
-  content: "";
-  position: absolute;
-  top: calc(100% + 10px);
-  left: 0;
-  width: 100%;
-  height: 15px;
-  background-color: lightgray;
-  border-radius: 1000px;
+.sec .content .main .grid-container .html {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: html;
 }
 
-.sec .content .main .containerbar ul.bar li:after {
-  content: "";
-  position: absolute;
-  top: calc(100% + 10px);
-  left: 0;
-  width: 0;
-  height: 15px;
-  background-color: #6d31c9;
-  border-radius: 1000px;
-  -webkit-animation-duration: .7s;
-          animation-duration: .7s;
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+.sec .content .main .grid-container .css-scss {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: css-scss;
+}
+
+.sec .content .main .grid-container .js {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: js;
+}
+
+.sec .content .main .grid-container .react {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: react;
+}
+
+.sec .content .main .grid-container .rwd {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: rwd;
+}
+
+.sec .content .main .grid-container .php {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: php;
+}
+
+.sec .content .main .grid-container .git {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: git;
+}
+
+.sec .content .main .grid-container .git-hub-lab {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: git-hub-lab;
+}
+
+.sec .content .main .grid-container .photoeditor {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: photoeditor;
 }
 
 .sec .content .containerknowledge {
