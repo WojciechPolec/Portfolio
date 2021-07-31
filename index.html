@@ -25,9 +25,19 @@
 		ScrollReveal({ duration: 1750 });
 		ScrollReveal({ reset: true });
 	</script>
+	<script src="pop-up.js"></script>
 </head>
 
 <body>
+
+<!-- PopUp -->
+<div id="PopUp" class="pop-up-wrapper">
+	<img src="images/pop-up.png">
+	<a onclick="closePopUp()">Close</a>
+</div>
+
+
+
 <!--Particles-->
 	<div id="particles-js"></div>
 	<script type="text/javascript" src="particles.js"></script>
@@ -213,6 +223,14 @@
 					<p><strong>Start studying</strong> at Wyższa Szkoła Informatyki i Zarządzania w Rzeszowie in the field of IT <em>(<strong>Part-time studies</strong> - only on Saturdays and Sundays)</em>.  </p>
 				</div>
 			</div>
+			<div class="timeline-block">
+				<div class="timeline-img">
+				</div>
+				<div class="timeline-content">
+					<h2>23.11.2020</h2>
+					<p><strong>Commencement of work </strong>in the company WydajnyWeb Sp. z.o.o. in Rzeszów.<br><strong>In the position of:</strong><br>Website and web application developer.<br>Web designer.  </p>
+				</div>
+			</div>
 		</div>
 	</section>
 <!--Knowledge-->
@@ -266,7 +284,7 @@
 			</div>
 			<div class="projectBx">
 				<div class="project-container">
-					<a href="http://wojciechpolec.pl/" target="_blank">
+					<a href="https://wojciechpolec.pl/" target="_blank">
 					<div class="imgBx">
 						<img src="images/portfolio.jpg">
 					</div>
@@ -288,7 +306,7 @@
 					</a>
 				</div>
 				<div class="project-container">
-					<a href="http://diamonddevils.pl/" target="_blank">
+					<a href="https://wojciechpolec.github.io/Diamond_Devils/" target="_blank">
 					<div class="imgBx">
 						<img src="images/diamondevils.jpg">
 					</div>
@@ -486,6 +504,7 @@
 		}
 	</script>
 
+	
 <script type="text/javascript">
 ScrollReveal().reveal('.programmer');
 ScrollReveal().reveal('.description');

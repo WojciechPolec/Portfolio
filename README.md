@@ -12,4 +12,4 @@ My personal website - portfolio
 
 ## Demo
 
-Project Link: [http://www.wojciechpolec.pl/](http://www.wojciechpolec.pl/)
+Project Link: [https://www.wojciechpolec.pl/](https://www.wojciechpolec.pl/)
